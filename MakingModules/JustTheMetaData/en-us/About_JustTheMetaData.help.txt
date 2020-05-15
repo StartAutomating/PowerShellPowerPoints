@@ -1,0 +1,3 @@
+﻿This is a sample about topic.
+
+If you're a smart cookie, right about now you should be realizing that one way to use metadata modules is as TFM.
