@@ -4,3 +4,6 @@
 
 
 This repository contains PowerPoint presentations and associated demo content for talks I have given in the past.
+
+* [Flexible Formatting](FlexibleFormatting)
+* [Making Modules](MakingModules)
