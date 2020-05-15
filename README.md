@@ -1,4 +1,4 @@
-﻿## PowerShell is an amazingly language.
+﻿## PowerShell is an amazing language.
 
 #### Don't Believe me?  Check out some PowerPoints.
 
