@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<!-- Generated with EZOut 1.8.2: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
+<Types>
+  <Type>
+    <Name>System.TimeZoneInfo</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>UTCOffset</Name>
+        <GetScriptBlock>
+                    $this.GetUtcOffset([DateTime]::UtcNow)
+
+                </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>LocalTime</Name>
+        <GetScriptBlock>
+                    [DateTime]::UtcNow + $this.GetUtcOffset([DateTime]::UtcNow)
+
+                </GetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Name</Name>
+        <GetScriptBlock>
+                    $tz = $this
+if ($tz.SupportsDaylightSavingTime) {
+    if ($tz.IsDaylightSavingTime([DateTime]::Now)) {
+        $tz.DaylightName
+    } else {
+        $tz.StandardName
+    }
+} else {
+    $tz.StandardName
+}
+
+                </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>
